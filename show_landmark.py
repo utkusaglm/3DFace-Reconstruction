@@ -8,8 +8,8 @@ import sys
 import argparse
 import json
 from PIL import Image
-
-
+#
+#
 # Optionally set detector and some additional detector parameters
 
 
@@ -48,12 +48,6 @@ def get_landmarks_from_image(image_path):
     #write to file
 
     return axis_on_2d, axis_on_3d
-    #filename = input_img[input_img.find("/") + 1:input_img.find(".jpeg")]
-
-    # with open(f"landmark_2d_{filename}.txt", 'w') as f:
-    #     f.write(str(axis_on_2d))
-    # with open(f"landmark_3d_{filename}.txt", 'w') as f:
-    #     f.write(str(axis_on_3d))
 
 
 def get_list_of_points(data):
@@ -73,31 +67,45 @@ if __name__ == '__main__':
     # Run parser
     parser = argparse.ArgumentParser(description='Parameter Processing')
     #no name raise error
-    parser.add_argument('--name', type=str,  help='image_name',)
-    if len(sys.argv) == 1:
+    parser.add_argument('--source_image', type=str,  help='image_name',)
+    parser.add_argument('--target_image', type=str,  help='image_name',)
+
+    if len(sys.argv) != 5:
         #help
-        print('Give image path as argument --name')
+        print('Give both image path as arguments --names')
         sys.exit(1)
-    image_path = parser.parse_args().name
-    landmarks_file_path = image_path.split('/')[-1].split('.')[0]+".txt"
-    #to run it python3 landmark_script.py --name images/emma.jpeg
-    data, _ = get_landmarks_from_image(image_path)
+
+    #first argument is the source image
+
+    source_image_path = parser.parse_args().source_image
+    source_landmarks_file_path = "../landmarks/"+source_image_path.split('/')[-1].split('.')[0]+"_landmarks.txt"
+
+    target_image_path = parser.parse_args().target_image
+    target_landmarks_file_path = "../landmarks/"+target_image_path.split('/')[-1].split('.')[0]+"_landmarks.txt"
+
+    #Source
+    data, _ = get_landmarks_from_image(source_image_path)
     landmark_points = get_list_of_points(data)
-    writePoints(landmark_points,landmarks_file_path)
+    writePoints(landmark_points,source_landmarks_file_path)
+
+    #Target
+    data, _ = get_landmarks_from_image(target_image_path)
+    landmark_points = get_list_of_points(data)
+    writePoints(landmark_points,target_landmarks_file_path)
 
 
-    # Load your image using PIL
-    image = Image.open(image_path)
-
-    # Create figure and axes
-    fig, ax = plt.subplots(1)
-
-    # Display the image
-    ax.imshow(image)
-
-    # Mark points on the image with red color
-    for point in landmark_points:
-        ax.add_patch(patches.Circle((point[0], point[1]), radius=1, color='red'))
-
-    # Show the plot
-    plt.show()
+    # # Load your image using PIL
+    # image = Image.open(image_path)
+    #
+    # # Create figure and axes
+    # fig, ax = plt.subplots(1)
+    #
+    # # Display the image
+    # ax.imshow(image)
+    #
+    # # Mark points on the image with red color
+    # for point in landmark_points:
+    #     ax.add_patch(patches.Circle((point[0], point[1]), radius=1, color='red'))
+    #
+    # # Show the plot
+    # plt.show()

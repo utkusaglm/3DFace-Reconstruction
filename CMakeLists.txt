@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 
 set(CMAKE_CONFIGURATION_TYPES Debug Release CACHE TYPE INTERNAL FORCE)
 
-project(load_bfm)
+project(face_reconstruction)
 
 # Options
 # Set C++ flags
@@ -35,6 +35,6 @@ set(SOURCES
         src/Optimizer.cpp
         )
 
-add_executable(load_bfm ${HEADERS} ${SOURCES})
-target_include_directories(load_bfm PUBLIC ${EIGEN3_INCLUDE_DIR} ${OpenCV_INCLUDE_DIRS} ${CERES_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS})
-target_link_libraries(load_bfm Eigen3::Eigen glfw GLEW  freeimage ceres ${OpenCV_LIBS} ${OPENGL_LIBRARIES} ${OPENGL_gl_LIBRARY} )
+add_executable(face_reconstruction ${HEADERS} ${SOURCES})
+target_include_directories(face_reconstruction PUBLIC ${EIGEN3_INCLUDE_DIR} ${OpenCV_INCLUDE_DIRS} ${CERES_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS})
+target_link_libraries(face_reconstruction Eigen3::Eigen glfw GLEW  freeimage ceres ${OpenCV_LIBS} ${OPENGL_LIBRARIES} ${OPENGL_gl_LIBRARY} )
