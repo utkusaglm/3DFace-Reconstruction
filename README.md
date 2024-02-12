@@ -10,6 +10,7 @@
 - In the directory, 
 - `mkdir build`
 - `cd build`
+- Copy the files from `https://drive.google.com/drive/folders/1FhLSHv8to8n-919K5ZsINMMsiekusldH` to data dir under the build 
 - `cmake ..`
 - `make`
 - `./face_reconstruction ../images/micheal.jpeg ../images/wolverine.jpg`
