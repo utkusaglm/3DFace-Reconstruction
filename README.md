@@ -6,11 +6,11 @@
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
 # How to run the code?
+- Copy the files from `https://drive.google.com/drive/folders/1FhLSHv8to8n-919K5ZsINMMsiekusldH` and create a data directory.
 - Please make sure that CmakeList.txt has the correct path to the Libraries.
 - In the directory, 
 - `mkdir build`
 - `cd build`
-- Copy the files from `https://drive.google.com/drive/folders/1FhLSHv8to8n-919K5ZsINMMsiekusldH` to data dir under the build 
 - `cmake ..`
 - `make`
 - `./face_reconstruction ../images/micheal.jpeg ../images/wolverine.jpg`
