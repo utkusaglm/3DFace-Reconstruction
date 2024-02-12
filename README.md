@@ -17,6 +17,6 @@
 - See the reconstruction folder for the results.
 - The left path is the source image and the right path is the target image.
 # Team Members:
-- Ramandika Pranamulia (03736495)
-- Rachmadio Noval Lazuardi (03766457)
-- Utku Saglam (03772729)
+- Ramandika Pranamulia 
+- Rachmadio Noval Lazuardi 
+- Utku Saglam
