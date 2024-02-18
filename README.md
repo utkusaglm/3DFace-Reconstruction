@@ -19,4 +19,7 @@
 # Team Members:
 - Ramandika Pranamulia 
 - Rachmadio Noval Lazuardi 
+
 - Utku Saglam
+# Some Figures:
+<img width="626" alt="micheal_scream_all_rec" src="https://github.com/utkusaglm/3DFace-Reconstruction/assets/58150504/e351611c-e5a1-4a24-a0f0-c8e5ea29e3a9"><img width="540" alt="micheal_all_rec" src="https://github.com/utkusaglm/3DFace-Reconstruction/assets/58150504/f7b2525b-ea53-4726-9943-b182c6c1e533">
