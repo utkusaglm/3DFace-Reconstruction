@@ -6,7 +6,9 @@
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
 # How to run the code?
-- Copy the files from `https://drive.google.com/drive/folders/1FhLSHv8to8n-919K5ZsINMMsiekusldH` and create a data directory.
+- Get the BFM weight [here](https://faces.dmi.unibas.ch/bfm/bfm2017.html). 
+- Download the original BFM weightfile.
+- Run `h5_to_bin.sh` to convert the weightfile.
 - Please make sure that CmakeList.txt has the correct path to the Libraries.
 - In the directory, 
 - `mkdir build`
@@ -19,7 +21,8 @@
 # Team Members:
 - Ramandika Pranamulia 
 - Rachmadio Noval Lazuardi 
-
 - Utku Saglam
 # Some Figures:
 <img width="626" alt="micheal_scream_all_rec" src="https://github.com/utkusaglm/3DFace-Reconstruction/assets/58150504/e351611c-e5a1-4a24-a0f0-c8e5ea29e3a9"><img width="540" alt="micheal_all_rec" src="https://github.com/utkusaglm/3DFace-Reconstruction/assets/58150504/f7b2525b-ea53-4726-9943-b182c6c1e533">
+
+# Report
